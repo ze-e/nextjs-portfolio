@@ -9,6 +9,7 @@
   border-radius: 12px;
   width: 100%;
   height: 300px;
+  background-color: white;
 }
 
 .image {
@@ -20,10 +21,11 @@
 
 .blurb {
   width: 100%;
-  margin-top: -14px;
+  height: 42px;
   padding: 10px;
   margin: auto;
   text-align: center;
-  background-color: rgba(62, 0, 67, 0.6);
+  background-color: rgb(62, 0, 67);
   color: white;
+  margin-top: -14px;
 }
