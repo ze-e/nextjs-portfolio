@@ -10,7 +10,7 @@ export default function Project() {
 
   return (
     <Layout backNav={true}>
-      <div>{project.title}</div>
+      <div>{project?.title}</div>
     </Layout>
   );
 }
