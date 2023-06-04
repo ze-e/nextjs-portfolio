@@ -1,7 +1,7 @@
 import React from "react";
 import { Layout } from "@/components";
 import { useRouter } from "next/router";
-import projectData from "@/data/projects.json";
+import projectData from "@/data/projects.js";
 
 export default function Project() {
   const router = useRouter();
