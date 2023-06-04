@@ -5,13 +5,14 @@
 }
 
 .itemContainer {
-  flex: 0 0 auto;
-  width: 33%;
+  min-width:calc(33% - 10px);
   max-width: calc(50% - 10px);
   margin-right: 10px;
+  margin-bottom: 10px;
 
   &:last-of-type {
     margin-right: 0;
+    margin-bottom: 0;
   }
 }
 
