@@ -8,16 +8,17 @@ export default function Nav({ backNav }) {
 
   return (
     <div className={style.container}>
-      <div>
-        {!backNav ? <ul className={style.navItems}>
-          <li className={style.navItem} ><Link className={style.link} href="/" activeClassName={style.isActive}>Home</Link>|</li>
-          <li className={style.navItem} ><Link className={style.link} href="/portfolio" activeClassName={style.isActive}>Portfolio</Link>|</li>
-          <li className={style.navItem} ><Link className={style.link} href="/videos" activeClassName={style.isActive}>Videos</Link>|</li>
-          <li className={style.navItem} ><Link className={style.link} href="/testimonials" activeClassName={style.isActive}>Testimonials</Link></li>
-        </ul> :
+      {!backNav ? <ul className={style.navItems}>
+        <li className={style.navItem} ><Link className={style.link} href="/" activeClassName={style.isActive}>Home</Link>|</li>
+        <li className={style.navItem} ><Link className={style.link} href="/portfolio" activeClassName={style.isActive}>Portfolio</Link>|</li>
+        <li className={style.navItem} ><Link className={style.link} href="/videos" activeClassName={style.isActive}>Videos</Link>|</li>
+        <li className={style.navItem} ><Link className={style.link} href="/testimonials" activeClassName={style.isActive}>Testimonials</Link></li>
+      </ul> :
+      <div className={style.navItems}>
         <button className={style.backButton} type="button" onClick={() => router.back()}>
-          {"<"}
-        </button>}
+          {"< Back"}
+        </button>
       </div>
+      }
     </div>  )
 }

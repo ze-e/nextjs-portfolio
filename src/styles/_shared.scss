@@ -1,0 +1,40 @@
+.twoColumn {
+  display: flex;
+  color: var(--theme-1);
+  padding: 57px;
+
+  * {
+    color: var(--text-color-1);
+    font-weight: 400;
+  }
+}
+
+.column-1 {
+  flex: 2;
+}
+
+.column-2 {
+  flex: 1;
+}
+
+.title, .text {
+  text-align: center;
+  background-color: var(--theme-2);
+  padding: 4px;
+  margin-right: 10px;
+}
+
+.title {
+  font-size: 60px;
+  margin-top: 56px;
+  margin-bottom: 48px;
+}
+
+.text {
+  font-size: 24px;
+  margin-bottom: 72px;
+}
+
+.text_md {
+  font-size: 18px;
+}

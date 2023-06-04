@@ -1,21 +1,16 @@
 import React from 'react';
-import { Layout } from '@/components';
-import styles from '@/styles/home.module.scss'
+import { Layout, LogoImg } from '@/components';
 
-import gearImg from "@/assets/gear.gif";
-import textImg from "@/assets/text.gif";
-import Image from 'next/image';
-
-export default function Home() {
-
+// eslint-disable-next-line
+export default () => {
   return (
     <Layout>
-      <main className={styles.container}>
-        <div className={styles.column1}>
-          <h2 className={styles.header}>
+      <main className={"twoColumn"}>
+        <div className={"column-1"}>
+          <h2 className={"title"}>
             Transform Your Ideas into Digital Reality!
           </h2>
-          <p className={styles.text}>
+          <p className={"text"}>
             At ZRR Web Dev, we{"'"}re passionate about crafting immersive web
             experiences that captivate your audience. With our expertise in
             fullstack web development, we bring your ideas to life and deliver
@@ -30,11 +25,8 @@ export default function Home() {
             powerful web applications that leave a lasting impression.
           </p>
         </div>
-        <div className={styles.column2}>
-          <div className={styles.imgContainer}>
-            <Image src={textImg} alt="logo" className={styles.imgForeground} />
-            <Image src={gearImg} alt="logo" className={styles.imgBackground} />
-          </div>
+        <div className={"column-2"}>
+          <LogoImg />
         </div>
       </main>
     </Layout>
