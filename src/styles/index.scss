@@ -1,0 +1,45 @@
+ul{
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+}
+
+body {
+  margin: 0;
+  background: black;
+}
+
+button {
+  appearance:none;
+  -webkit-appearance:none;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+}
+
+input {
+  border: none;
+  caret-color: var(--theme-1);
+}
+
+ul {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+a {
+  text-decoration: none;
+  :hover {
+    cursor: pointer;
+    text-decoration: underline;
+    opacity: 0.8;
+  }
+}
