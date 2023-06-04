@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.imageContainer {
+  border-radius: 12px;
+}
+
+.blurb {
+  margin-top: -14px;
+  padding: 10px;
+  margin: auto;
+  text-align: center;
+  background-color: rgba(62, 0, 67, 0.6);
+}

@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.itemContainer {
+  flex: 0 0 auto;
+  width: 33%;
+  max-width: calc(50% - 10px);
+  margin-right: 10px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .itemContainer {
+    width: 50%;
+    max-width: 100%;
+  }
+}

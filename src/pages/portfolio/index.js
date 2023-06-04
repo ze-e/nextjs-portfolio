@@ -1,11 +1,10 @@
 import React from 'react'
-import Link from "next/link";
-import { Layout } from "@/components";
-
+import { Layout, Grid } from "@/components";
+import projectData from "@/data/projects.json";
 export default function index() {
   return (
     <Layout>
-      <Link href="portfolio/1">1</Link>
+      <Grid items={projectData} />
     </Layout>
   );
 }

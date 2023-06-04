@@ -1,0 +1,20 @@
+{
+  "projects":[
+    {
+      "title":"devFinder",
+      "blurb":"",
+      "description":"",
+      "skills":["React", "TypeScript"],
+      "link":"",
+      "repo":""
+    },
+    {
+      "title":"PledgeLlama",
+      "blurb":"",
+      "description":"",
+      "skills":["React", "PostGreSQL", "NodeJS", "REST API", "Emotion"],
+      "link":"",
+      "repo":""
+    }
+  ]
+}
