@@ -25,7 +25,7 @@
   font-weight: 300;
 }
 
-.isActive {
+.link.isActive {
   font-weight: bold;
 }
 
@@ -33,4 +33,5 @@
   appearance: none;
   border: none;
   background: none;
+  font-family: initial;
 }

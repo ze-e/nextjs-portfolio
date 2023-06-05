@@ -38,5 +38,15 @@ a {
   :hover {
     cursor: pointer;
     text-decoration: underline;
+    opacity: 0.8;
+  }
+}
+
+a.noHover {
+  text-decoration: none;
+  :hover {
+    cursor: pointer;
+    text-decoration: underline;
+    opacity: 0.8;
   }
 }

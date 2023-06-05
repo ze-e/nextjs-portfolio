@@ -11,7 +11,7 @@ export default function Project() {
   return (
     <Layout backNav={true}>
       <main className={"twoColumn"}>
-        <div className={"column-1"}>
+        <div className={"column-2"}>
           <h2 className={"title"}>
             {project?.title}
           </h2>
@@ -19,7 +19,7 @@ export default function Project() {
             {project?.description ? project?.description : project?.blurb}
           </p>
         </div>
-        <div className={"column-2"}>
+        <div className={"column-1"}>
           <Img src={project?.img} alt={project?.title} />
         </div>
       </main>

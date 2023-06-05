@@ -6,13 +6,21 @@ import { useRouter } from 'next/router';
 export default function Nav({ backNav }) {
   const router = useRouter();
 
+  const NavLink = ({ ...props }) => {
+    return (
+      <Link {...props}>
+        <a className={router.pathname == props.href ? style.isActive : ""}>
+          {props.children}
+        </a>
+      </Link>
+    )
+  }
+
   return (
     <div className={style.container}>
       {!backNav ? <ul className={style.navItems}>
-        <li className={style.navItem} ><Link className={style.link} href="/" activeClassName={style.isActive}>Home</Link>|</li>
-        <li className={style.navItem} ><Link className={style.link} href="/portfolio" activeClassName={style.isActive}>Portfolio</Link>|</li>
-        <li className={style.navItem} ><Link className={style.link} href="/videos" activeClassName={style.isActive}>Videos</Link>|</li>
-        <li className={style.navItem} ><Link className={style.link} href="/testimonials" activeClassName={style.isActive}>Testimonials</Link></li>
+        <li className={style.navItem} ><NavLink className={style.link} href="/" >Home</NavLink>|</li>
+        <li className={style.navItem} ><NavLink className={style.link} href="/portfolio" >Portfolio</NavLink></li>
       </ul> :
       <div className={style.navItems}>
         <button className={style.backButton} type="button" onClick={() => router.back()}>
@@ -20,5 +28,6 @@ export default function Nav({ backNav }) {
         </button>
       </div>
       }
-    </div>  )
+    </div>
+  )
 }
