@@ -6,3 +6,4 @@ export { default as Card } from "@/components/Card";
 export { default as Img } from "@/components/Img";
 export { default as LogoImg } from "@/components/LogoImg";
 export { default as Tag } from "@/components/Tag";
+export { default as Tags } from "@/components/Tags";

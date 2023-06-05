@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout, Img } from "@/components";
+import { Layout, Img, Tag, Tags } from "@/components";
 import { useRouter } from "next/router";
 import projectData from "@/data/projects.js";
 
@@ -11,16 +11,15 @@ export default function Project() {
   return (
     <Layout backNav={true}>
       <main className={"twoColumn"}>
-        <div className={"column-2"}>
-          <h2 className={"title"}>
-            {project?.title}
-          </h2>
-          <p className={'text'}>
+        <div className={"column-1"}>
+          <h2 className={"title"}>{project?.title}</h2>
+          <p className={"text"}>
             {project?.description ? project?.description : project?.blurb}
           </p>
         </div>
-        <div className={"column-1"}>
+        <div className={"column-2"}>
           <Img src={project?.img} alt={project?.title} />
+          <Tags data={project?.tags} />
         </div>
       </main>
     </Layout>
