@@ -2,7 +2,6 @@ import React from "react";
 import { Layout, Img, Tag, Tags } from "@/components";
 import { useRouter } from "next/router";
 import projectData from "@/data/projects.js";
-import Link from "next/link";
 
 export default function Project() {
   const router = useRouter();
@@ -17,16 +16,18 @@ export default function Project() {
           <p className={"text"}>
             {project?.description ? project?.description : project?.blurb}
           </p>
-          {!!project?.link && (
-            <Link href={project?.link}>
-              <Tag tag={"Live Site"} />
-            </Link>
-          )}
-          {!!project?.repo && (
-            <Link href={project?.repo}>
-              <Tag tag={"Repo"} />
-            </Link>
-          )}
+          <Tags>
+            {!!project?.link && (
+              <a href={project?.link} target="_blank">
+                <Tag tag={"Live Site"} />
+              </a>
+            )}
+            {!!project?.repo && (
+              <a href={project?.repo} target="_blank">
+                <Tag tag={"Repo"} />
+              </a>
+            )}
+          </Tags>
         </div>
         <div className={"column-2"}>
           <Img src={project?.img} alt={project?.title} />

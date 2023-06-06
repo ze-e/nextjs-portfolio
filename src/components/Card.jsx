@@ -9,7 +9,7 @@ export default function Card({data}) {
       <Link className={styles.imageContainer} href={`portfolio/${data.title}`}>
         <Image className={styles.image} src={data.img} alt={data.title} />
       </Link>
-      <div className={styles.blurb}>{data.title}</div>
+      <div className={styles.title}>{data.title}</div>
     </div>
   )
 }
