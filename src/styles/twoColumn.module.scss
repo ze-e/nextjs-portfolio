@@ -3,7 +3,6 @@
 .twoColumn {
   display: flex;
   color: $theme-1;
-  padding: 57px;
   padding-top: 0;
 
   * {
@@ -22,7 +21,6 @@
 
 @media only screen and (max-width: 1240px) {
   .twoColumn {
-    padding: 10px;
     padding-top: 0;
   }
 
@@ -37,7 +35,6 @@
 
 @media only screen and (max-width: 1000px) {
   .twoColumn {
-    padding: 10px;
     padding-top: 0;
     flex-direction: column-reverse;
   }
