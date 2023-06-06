@@ -13,9 +13,8 @@ export default function Project() {
       <main className={"twoColumn"}>
         <div className={"column-1"}>
           <h2 className={"title"}>{project?.title}</h2>
-          <p className={"text"}>
-            {project?.description ? project?.description : project?.blurb}
-          </p>
+          <h3 className={"subtitle"}>{project?.blurb}</h3>
+          <p className={"text"}>{project?.description}</p>
           <Tags>
             {!!project?.link && (
               <a href={project?.link} target="_blank">
