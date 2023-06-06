@@ -20,9 +20,9 @@ export default function Nav({ backNav }) {
   return (
     <div className={styles.container}>
       {!backNav ? <ul className={styles.navItems}>
-        <li className={styles.navItem} ><NavLink className={styles.link} href="/" >Home</NavLink>|</li>
-        <li className={styles.navItem} ><NavLink className={styles.link} href="/portfolio" >Portfolio</NavLink>|</li>
-        {/* <li className={styles.navItem} ><NavLink className={styles.link} href="/videos" >Videos</NavLink></li> */}
+        <li className={styles.navItem} ><NavLink className={styles.link} href="/" >Home</NavLink></li>
+        <li className={styles.navItem} >|<NavLink className={styles.link} href="/portfolio" >Portfolio</NavLink></li>
+        {/* <li className={styles.navItem} >|<NavLink className={styles.link} href="/videos" >Videos</NavLink></li> */}
       </ul> :
       <div className={styles.navItems}>
         <button className={`${inconsolata.className} ${styles.backButton}`} type="button" onClick={() => router.back()}>
