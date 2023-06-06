@@ -2,6 +2,7 @@ import React from 'react'
 import Link from "next/link";
 import style from '@/styles/nav.module.scss';
 import { useRouter } from 'next/router';
+import { inconsolata } from "@/utils/fonts";
 
 export default function Nav({ backNav }) {
   const router = useRouter();
@@ -23,7 +24,7 @@ export default function Nav({ backNav }) {
         <li className={style.navItem} ><NavLink className={style.link} href="/portfolio" >Portfolio</NavLink></li>
       </ul> :
       <div className={style.navItems}>
-        <button className={style.backButton} type="button" onClick={() => router.back()}>
+        <button className={`${inconsolata.className} ${style.backButton}`} type="button" onClick={() => router.back()}>
           {"< Back"}
         </button>
       </div>

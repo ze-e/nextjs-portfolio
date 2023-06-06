@@ -1,3 +1,5 @@
+@import './_globals.scss';
+
 .container {
   height: 72px;
   background-image: linear-gradient( rgba(29, 145, 135, 1), rgba(29, 145, 135, 0.6));
@@ -13,19 +15,19 @@
 
 .navItem, .backButton {
   list-style: none;
-  color: var(--text-color-1);
+  color: $text-color-1;
   font-size: 32px;
 }
 
 .link {
   text-decoration: none;
-  color: var(--text-color-1);
+  color: $text-color-1;
   margin-left: 4px;
   margin-right: 4px;
   font-weight: 300;
 }
 
-.link.isActive {
+.isActive {
   font-weight: bold;
 }
 
@@ -33,5 +35,7 @@
   appearance: none;
   border: none;
   background: none;
-  font-family: initial;
+  &:hover{
+    text-decoration: underline;
+  }
 }

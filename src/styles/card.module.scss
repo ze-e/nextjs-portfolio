@@ -1,7 +1,9 @@
+@import './_globals.scss';
+
 .container {
   display: flex;
   flex-direction: column;
-  background-color: var(--theme-1);
+  background-color: $theme-1;
   border-radius: 12px 12px 0 0;
 }
 
@@ -9,7 +11,7 @@
   border-radius: 12px;
   width: 100%;
   height: 300px;
-  background-color: var(--text-color-1);
+  background-color: $text-color-1;
 }
 
 .image {
@@ -24,12 +26,13 @@
 
 .blurb {
   width: 100%;
-  height: 56px;
+  min-height: 56px;
   padding: 10px;
   margin: auto;
   text-align: center;
-  background-color: var(--theme-2-solid);
+  background-color: $theme-2-solid;
   color: white;
   margin-top: -14px;
   font-size: 24px;
+  flex: 1 0 0;
 }

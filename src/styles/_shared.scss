@@ -1,10 +1,12 @@
+@import './_globals.scss';
+
 .twoColumn {
   display: flex;
-  color: var(--theme-1);
+  color: $theme-1;
   padding: 57px;
 
   * {
-    color: var(--text-color-1);
+    color: $text-color-1;
     font-weight: 400;
   }
 }
@@ -19,7 +21,7 @@
 
 .title, .text {
   text-align: center;
-  background-color: var(--theme-2);
+  background-color: $theme-2;
   padding: 4px;
   margin-right: 128px;
 }

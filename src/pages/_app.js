@@ -3,7 +3,7 @@ import "../styles/index.scss";
 
 export default function App({ Component, pageProps }) {
   return (
-    <div className={`theme_dark ${inconsolata.className}`}>
+    <div className={`${inconsolata.className}`}>
       <Component {...pageProps} />
     </div>
   );

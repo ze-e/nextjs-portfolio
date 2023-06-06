@@ -1,7 +1,8 @@
+@import './_globals.scss';
 .container {
   border-radius: 12px;
-  background-color: var(--theme-2);
-  color: var(--text-color-1);
+  background-color: $theme-2;
+  color: $text-color-1;
   padding: 10px;
   text-align: center;
 }

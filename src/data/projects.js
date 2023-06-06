@@ -1,4 +1,5 @@
 import devFinderImg from "@/assets/devfinder.png";
+import llamaImg from "@/assets/pledgellama.png";
 
 const projects = [
   {
@@ -15,8 +16,9 @@ const projects = [
     blurb: "",
     description: "",
     tags: ["React", "PostGreSQL", "NodeJS", "REST API", "Emotion"],
-    link: "",
+    link: "https://pledgellama.com/",
     repo: "",
+    img: llamaImg,
   },
 ];
 

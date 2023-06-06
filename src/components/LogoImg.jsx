@@ -2,7 +2,7 @@ import React from 'react'
 import styles from '@/styles/logoImg.module.scss'
 
 import gearImg from "@/assets/gear.gif";
-import textImg from "@/assets/text.gif";
+import textImg from "@/assets/text-2.gif";
 import Image from 'next/image';
 
 export default function LogoImg() {
