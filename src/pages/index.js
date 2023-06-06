@@ -1,17 +1,16 @@
 import React from 'react';
-import { Layout, LogoImg, TextBox } from '@/components';
+import { Layout, LogoImg, TextBox, Text, Title, TwoColumn } from '@/components';
 
 // eslint-disable-next-line
 export default function index() {
   return (
     <Layout>
-      <main className={"twoColumn"}>
-        <div className={"column-1"}>
+      <TwoColumn column1={
           <TextBox>
-            <h2 className={"title"}>
+            <Title>
               Transform Your Ideas into Digital Reality!
-            </h2>
-            <p className={"text"}>
+            </Title>
+            <Text>
               At ZRR Web Dev, we{"'"}re passionate about crafting immersive web
               experiences that captivate your audience. With our expertise in
               fullstack web development, we bring your ideas to life and deliver
@@ -25,13 +24,12 @@ export default function index() {
               us help you make an impact in the digital world with stunning
               websites and powerful web applications that leave a lasting
               impression.
-            </p>
+            </Text>
           </TextBox>
-        </div>
-        <div className={"column-2"}>
+      }
+        column2={
           <LogoImg />
-        </div>
-      </main>
+        } />
     </Layout>
   );
 }

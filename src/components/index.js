@@ -8,3 +8,7 @@ export { default as LogoImg } from "@/components/LogoImg";
 export { default as Tag } from "@/components/Tag";
 export { default as Tags } from "@/components/Tags";
 export { default as TextBox } from "@/components/TextBox";
+export { default as Text } from "@/components/Text";
+export { default as Title } from "@/components/Title";
+export { default as Subtitle } from "@/components/Subtitle";
+export { default as TwoColumn } from "@/components/TwoColumn";

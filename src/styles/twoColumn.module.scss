@@ -1,0 +1,22 @@
+@import './_globals.scss';
+
+.twoColumn {
+  display: flex;
+  color: $theme-1;
+  padding: 57px;
+  padding-top: 0;
+
+  * {
+    color: $text-color-1;
+    font-weight: 400;
+  }
+}
+
+.column1 {
+  flex: 2;
+  margin-right: 128px;
+}
+
+.column2 {
+  flex: 1;
+}
