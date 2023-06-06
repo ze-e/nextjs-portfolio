@@ -1,5 +1,5 @@
 import devFinderImg from "@/assets/devfinder.png";
-import llamaImg from "@/assets/pledgeLlama.png";
+import llamaImg from "@/assets/llama.png";
 
 const projects = [
   {
