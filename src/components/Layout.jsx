@@ -5,7 +5,7 @@ export default function Layout({backNav = false, children}) {
   return (
     <div className={styles.container}>
       <Nav backNav={backNav} />
-      <main>{children}</main>
+      <main className={styles.body}>{children}</main>
       <Footer />
     </div>
     )
