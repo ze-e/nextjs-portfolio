@@ -5,7 +5,10 @@
   position: relative;
   width: 100%;
   height: 100%;
-  background: radial-gradient(closest-side, rgba(123, 123, 123, 0.37), $theme-1);
+  height: 60%;
+  background: radial-gradient(circle, rgba(123, 123, 123, 0.37) 0%, $theme-1 40%);
+  background-size: contain;
+  background-position: center;
 }
 
 .imgForeground{
@@ -16,6 +19,7 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
+  background-position: center;
 }
 
 .imgBackground{
@@ -26,17 +30,14 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
+  background-position: center;
 }
 
 @media only screen and (max-width: 1240px) {
   .imgContainer {
     margin-top: 0;
     height: 60%;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .imgContainer {
-    height: 100%;
+    min-height: 250px;
+    background: radial-gradient(circle, rgba(123, 123, 123, 0.37) 0%, $theme-1 30%);
   }
 }
