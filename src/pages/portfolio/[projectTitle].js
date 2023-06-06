@@ -2,6 +2,7 @@ import React from "react";
 import { Layout, Img, Tag, Tags, Text, TextBox, Title, Subtitle, TwoColumn } from "@/components";
 import { useRouter } from "next/router";
 import projectData from "@/data/projects.js";
+import projectDefaultImg from "@/assets/project.jpg";
 
 export default function Project() {
   const router = useRouter();
@@ -34,7 +35,7 @@ export default function Project() {
         }
         column2={
           <>
-            <Img src={project?.img} alt={project?.title} />
+            <Img src={project?.img ? project?.img : projectDefaultImg} alt={project?.title} />
             <Tags data={project?.tags} />
           </>
         }

@@ -1,7 +1,10 @@
+@import './_globals';
+
 .subtitle {
   font-size: 32px;
   margin-top: 32px;
   margin-bottom: 32px;
+  color: $text-color-1;
 }
 @media only screen and (max-width: 1240px) {
   .subtitle {
