@@ -1,12 +1,13 @@
 import React from 'react';
-import { Layout, LogoImg } from '@/components';
+import { Layout, LogoImg, TextBox } from '@/components';
 
 // eslint-disable-next-line
-export default () => {
+export default Home = () => {
   return (
     <Layout>
       <main className={"twoColumn"}>
         <div className={"column-1"}>
+          <TextBox>
           <h2 className={"title"}>
             Transform Your Ideas into Digital Reality!
           </h2>
@@ -23,7 +24,8 @@ export default () => {
             the full potential of your business with ZRR Web Dev. Let us help
             you make an impact in the digital world with stunning websites and
             powerful web applications that leave a lasting impression.
-          </p>
+            </p>
+          </TextBox>
         </div>
         <div className={"column-2"}>
           <LogoImg />
