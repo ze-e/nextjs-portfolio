@@ -21,6 +21,27 @@
   flex: 1;
 }
 
-  @media only screen and (min-width: 1440px) {
-    
+@media only screen and (max-width: 1240px) {
+  .twoColumn {
+    padding: 20px;
   }
+  .column1 {
+    margin-right: 10%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .twoColumn {
+    padding: 10px;
+    padding-top: 0;
+    flex-direction: column-reverse;
+  }
+
+  .column1 {
+    margin-right: 0;
+  }
+
+  .column2 {
+    margin-bottom: 12px;
+  }
+}

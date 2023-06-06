@@ -27,3 +27,16 @@
   height: 100%;
   object-fit: contain;
 }
+
+@media only screen and (max-width: 1240px) {
+  .imgContainer {
+    margin-top: 0;
+    height: 60%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .imgContainer {
+    height: 100%;
+  }
+}
