@@ -7,7 +7,7 @@ import projectDefaultImg from "@/assets/project.jpg";
 export default function Project() {
   const router = useRouter();
   const projectTitle = router.query.projectTitle;
-  const project = projectData.find((p) => (p.title = projectTitle));
+  const project = projectData.find((p) => (p.title === projectTitle));
 
   return (
     <Layout backNav={true}>

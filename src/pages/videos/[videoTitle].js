@@ -6,7 +6,7 @@ import videoData from "@/data/videos.js";
 export default function Project() {
   const router = useRouter();
   const videoTitle = router.query.videoTitle;
-  const video = videoData.find((v) => (v.title = videoTitle));
+  const video = videoData.find((v) => (v.title === videoTitle));
 
   return (
     <Layout backNav={true}>
