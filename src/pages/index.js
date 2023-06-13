@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, LogoImg, TextBox, Text, Title, TwoColumn } from '@/components';
+import { Layout, LogoImg, TextBox, Text, Title, TwoColumn, RenderProp } from '@/components';
 
 // eslint-disable-next-line
 export default function index() {

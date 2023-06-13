@@ -13,3 +13,4 @@ export { default as Title } from "@/components/Title";
 export { default as Subtitle } from "@/components/Subtitle";
 export { default as TwoColumn } from "@/components/TwoColumn";
 export { default as Video } from "@/components/Video";
+export { default as RenderProp } from "@/components/RenderProp";
