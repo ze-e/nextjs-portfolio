@@ -14,7 +14,7 @@ export default function Project() {
         <Subtitle>{video?.title}</Subtitle>
       </TextBox>
       <Video src={video?.link} title={video?.title } />
-      <Tags data={video?.tags} />
+      <Tags data={video?.tags} align="center"/>
     </Layout>
   );
 }
