@@ -1,7 +1,20 @@
 import devFinderImg from "@/assets/devfinder.png";
 import llamaImg from "@/assets/llama.png";
+import codequestImg from "@/assets/codequest.png";
+import leaderboardImg from "@/assets/leaderboard.png";
 
 const projects = [
+  {
+    title: "PledgeLlama",
+    blurb:
+      "Subscribe for $5.99 a month to place pledges on pledge drives from your favorite charities. Making the world a better place just got easier, and even more fun!",
+    description:
+      "Created this project for a small startup in Boise. Worked with stakeholders to create designs in XD. Transformed this into a full functioning PWA. Used PostgreSQL to create a backend API that authenticizes users, handles payment processing, and manages subscriptions. Created an easy to use UI using human-centered UX, where users can search for charities and mamnage their pledges.",
+    tags: ["React", "PostGreSQL", "NodeJS", "REST API", "Emotion"],
+    link: "https://pledgellama.com/",
+    repo: "",
+    img: llamaImg,
+  },
   {
     title: "devFinder",
     blurb: "Find top-notch developers in your vicinity with DevFinder",
@@ -13,13 +26,25 @@ const projects = [
     img: devFinderImg,
   },
   {
-    title: "PledgeLlama",
-    blurb: "Subscribe for $5.99 a month to place pledges on pledge drives from your favorite charities. Making the world a better place just got easier, and even more fun!",
-    description: "Created this project for a small startup in Boise. Worked with stakeholders to create designs in XD. Transformed this into a full functioning PWA. Used PostgreSQL to create a backend API that authenticizes users, handles payment processing, and manages subscriptions. Created an easy to use UI using human-centered UX, where users can search for charities and mamnage their pledges.",
-    tags: ["React", "PostGreSQL", "NodeJS", "REST API", "Emotion"],
-    link: "https://pledgellama.com/",
-    repo: "",
-    img: llamaImg,
+    title: "The Leaderboard",
+    blurb:
+      "Are you the greatest there is? Prove it. Add your name to the official The Leaderboard",
+    description:
+      "A small project I did over a few hours based on a simple idea my friend came up with",
+    tags: ["React", "Firestore", "Payment processing"],
+    link: "",
+    repo: "https://github.com/ze-e/skill-grid",
+    img: leaderboardImg,
+  },
+  {
+    title: "CodeQuest",
+    blurb: "Gamified Teacher Management Software - In Progress",
+    description:
+      "Gameified teacher management software turns your lessons into an RPG!",
+    tags: ["React", "SASS"],
+    link: "",
+    repo: "https://github.com/ze-e/skill-grid",
+    img: codequestImg,
   },
 ];
 
