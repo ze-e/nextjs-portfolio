@@ -32,8 +32,8 @@ const projects = [
     description:
       "A small project I did over a few hours based on a simple idea my friend came up with",
     tags: ["React", "Firestore", "Payment processing"],
-    link: "",
-    repo: "https://github.com/ze-e/skill-grid",
+    link: "https://the-leaderboard.net/",
+    repo: "",
     img: leaderboardImg,
   },
   {
