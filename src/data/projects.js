@@ -1,7 +1,7 @@
 import devFinderImg from "@/assets/devfinder.png";
 import llamaImg from "@/assets/llama.png";
-import codequestImg from "@/assets/codequest.png";
-import leaderboardImg from "@/assets/leaderboard.png";
+import codeQuestImg from "@/assets/code_quest.png";
+import leaderBoardImg from "@/assets/leader_board.png";
 
 const projects = [
   {
@@ -34,7 +34,7 @@ const projects = [
     tags: ["React", "Firestore", "Payment processing"],
     link: "https://the-leaderboard.net",
     repo: "",
-    img: leaderboardImg,
+    img: leaderBoardImg,
   },
   {
     title: "CodeQuest",
@@ -44,7 +44,7 @@ const projects = [
     tags: ["React", "SASS"],
     link: "",
     repo: "https://github.com/ze-e/skill-grid",
-    img: codequestImg,
+    img: codeQuestImg,
   },
 ];
 
