@@ -19,7 +19,7 @@ export default function Nav({ backNav }) {
         <li className={styles.navItem} ><span className={styles.pipe}>|</span><Link className={styles.link} {...registerRoute(['videos'])} >Videos</Link></li>
         <li className={styles.navItem} ><span className={styles.pipe}>|</span><a className={styles.link} href="https://github.com/ze-e" target="_blank" >Github</a></li>
       </ul> :
-      <div className={styles.navItems}>
+      <div className={styles.backContainer}>
         <button className={`${inconsolata.className} ${styles.backButton}`} type="button" onClick={() => router.back()}>
           {"< Back"}
         </button>
