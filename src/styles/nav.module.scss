@@ -1,8 +1,15 @@
 @import './_globals.scss';
+@import './_mixins';
 
 .container {
   height: 72px;
   background-image: linear-gradient( rgba(29, 145, 135, 1), rgba(29, 145, 135, 0.6));
+  @include small-screen {
+    height: auto;
+    position: sticky;
+    top:0;
+    z-index: 100;
+  }
 }
 
 .navItems{
@@ -11,12 +18,18 @@
   justify-content: flex-end;
   text-align: right;
   padding: 19px;
+  @include small-screen {
+    padding: 6px;
+  }
 }
 
 .navItem, .backButton {
   list-style: none;
   color: $text-color-1;
   font-size: 32px;
+  @include small-screen {
+    font-size: 18px;
+  }
 }
 
 .isActive {
