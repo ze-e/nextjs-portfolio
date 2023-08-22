@@ -41,7 +41,7 @@ const projects = [
     blurb: "Gamified Teacher Management Software - In Progress",
     description:
       "Gameified teacher management software turns your lessons into an RPG!",
-    tags: ["React", "SASS"],
+    tags: ["React", "SASS", "NodeJS", "MongoDB", "Mongoose", "REST API"],
     link: "https://netlify--dazzling-clafoutis-dadfc1.netlify.app/login",
     repo: "https://github.com/ze-e/Avatar-Creator",
     img: codeQuestImg,
