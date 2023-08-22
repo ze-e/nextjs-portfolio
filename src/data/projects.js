@@ -42,8 +42,8 @@ const projects = [
     description:
       "Gameified teacher management software turns your lessons into an RPG!",
     tags: ["React", "SASS"],
-    link: "",
-    repo: "https://github.com/ze-e/skill-grid",
+    link: "https://netlify--dazzling-clafoutis-dadfc1.netlify.app/login",
+    repo: "https://github.com/ze-e/Avatar-Creator",
     img: codeQuestImg,
   },
 ];
