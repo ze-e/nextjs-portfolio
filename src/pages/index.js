@@ -1,35 +1,48 @@
 import React from 'react';
-import { Layout, LogoImg, TextBox, Text, Title, TwoColumn, RenderProp } from '@/components';
+import { Layout, LogoImg, TextBox, Text, Title, TwoColumn, Divider, Grid } from '@/components';
+import RoboIco from '@/assets/brand/robo-ico.png';
 
+import '@/data/services'
+import projects from '@/data/projects';
 // eslint-disable-next-line
 export default function index() {
   return (
     <Layout>
+      <section className="anchor" id="home">
       <TwoColumn column1={
           <TextBox>
             <Title>
-              Transform Your Ideas into Digital Reality!
+              Your Helpful Computer Assistant
             </Title>
             <Text>
-              At ZRR Web Dev, we{"'"}re passionate about crafting immersive web
-              experiences that captivate your audience. With our expertise in
-              fullstack web development, we bring your ideas to life and deliver
-              seamless, high-performing websites and web applications. From
-              dynamic e-commerce platforms to intuitive user interfaces, our
-              team of skilled developers and designers work tirelessly to create
-              pixel-perfect solutions that elevate your online presence. We
-              pride ourselves on our attention to detail, user-centric approach,
-              and commitment to delivering projects on time and within budget.
-              Unlock the full potential of your business with ZRR Web Dev. Let
-              us help you make an impact in the digital world with stunning
-              websites and powerful web applications that leave a lasting
-              impression.
+            Empowering creativity and efficiency through innovative web development and AI automation solutions.
             </Text>
           </TextBox>
       }
         column2={
-          <LogoImg />
+          <LogoImg/>
         } />
+        </section>
+        <Divider image={RoboIco} />
+        <section className="anchor" id="What We Do">
+        <TwoColumn column1={
+          <TextBox>
+            <Title>
+              Innovate, Automate, Elevate
+            </Title>
+            <Text>
+            At Rex Teq, we specialize in transforming your digital presence and automating your business processes. 
+            Our services include web development, building a social media presence, expert consulting to streamline workflows and enhance efficiency, 
+            and advanced AI automation solutions to create custom chatbots and applications tailored to your needs. 
+            Let us help you leverage technology to drive growth and innovation in your business.
+            </Text>
+          </TextBox>
+      }
+        column2={
+          <LogoImg/>
+        } />
+        <Grid items={projects}/>
+        </section>
     </Layout>
   );
 }

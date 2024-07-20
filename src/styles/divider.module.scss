@@ -1,0 +1,7 @@
+@import './_globals.scss';
+
+.container {
+    @include centered;
+    min-height: 150px;
+    background: $theme-3;
+}
