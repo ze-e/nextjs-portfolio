@@ -31,9 +31,9 @@ export default function index() {
               Innovate, Automate, Elevate
             </Title>
             <Text>
-            At Rex Teq, we specialize in transforming your digital presence and automating your business processes. 
+            At Rex Teq, we specialize in transforming your digital presence and automating your business processes.
             Our services include web development, building a social media presence, expert consulting to streamline workflows and enhance efficiency, 
-            and advanced AI automation solutions to create custom chatbots and applications tailored to your needs. 
+            and advanced AI automation solutions to create custom chatbots and applications tailored to your needs.
             Let us help you leverage technology to drive growth and innovation in your business.
             </Text>
           </TextBox>
@@ -41,7 +41,7 @@ export default function index() {
         column2={
           <LogoImg/>
         } />
-        <Grid items={projects}/>
+        <Grid items={projects} type="text"/>
         </section>
     </Layout>
   );
