@@ -1,15 +1,13 @@
 import React from 'react';
 import { Layout, LogoImg, TextBox, Text, Title, TwoColumn, Divider, Grid } from '@/components';
-import RoboIco from '@/assets/brand/robo-ico.png';
 
-import '@/data/services'
-import projects from '@/data/projects';
+import services from '@/data/services'
 // eslint-disable-next-line
 export default function index() {
   return (
     <Layout>
-      <section className="anchor" id="home">
-      <TwoColumn column1={
+      <section className="anchor" id="Home" style={{marginTop: "100px"}}>
+      <TwoColumn column_1_size={2} column_2_size={1} column1={
           <TextBox>
             <Title>
               Your Helpful Computer Assistant
@@ -23,25 +21,26 @@ export default function index() {
           <LogoImg/>
         } />
         </section>
-        <Divider image={RoboIco} />
         <section className="anchor" id="What We Do">
+          <Divider height={"10px"} background={"#000"}/>
         <TwoColumn column1={
-          <TextBox>
-            <Title>
-              Innovate, Automate, Elevate
-            </Title>
-            <Text>
-            At Rex Teq, we specialize in transforming your digital presence and automating your business processes.
-            Our services include web development, building a social media presence, expert consulting to streamline workflows and enhance efficiency, 
-            and advanced AI automation solutions to create custom chatbots and applications tailored to your needs.
-            Let us help you leverage technology to drive growth and innovation in your business.
-            </Text>
-          </TextBox>
-      }
+          <Grid items={services} type="text" orientation="v" />
+        }
         column2={
-          <LogoImg/>
+          <div style={{position: "sticky", top: 100}}>
+            <TextBox>
+              <Title>
+                Innovate, Automate, Elevate
+              </Title>
+              <Text>
+              At Rex Teq, we specialize in transforming your digital presence and automating your business processes.
+              Our services include web development, building a social media presence, expert consulting to streamline workflows and enhance efficiency, 
+              and advanced AI automation solutions to create custom chatbots and applications tailored to your needs.
+              Let us help you leverage technology to drive growth and innovation in your business.
+              </Text>
+            </TextBox>
+          </div>
         } />
-        <Grid items={projects} type="text"/>
         </section>
     </Layout>
   );

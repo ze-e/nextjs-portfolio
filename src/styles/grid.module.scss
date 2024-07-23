@@ -1,6 +1,16 @@
 .container {
   display: flex;
   flex-wrap: wrap;
+
+  &.vertical {
+    .itemContainer {
+      flex-direction: column;
+      width: 100%;
+      box-sizing: border-box;
+      margin: 20px;
+      flex-wrap: nowrap;
+    }
+  }
 }
 
 .itemContainer {

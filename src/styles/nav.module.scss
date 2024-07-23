@@ -3,12 +3,15 @@
 
 .container {
   height: 72px;
+  width: 100vw;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: fixed;
+  top: 0;
+  z-index: 100;
   background-image: linear-gradient( rgba(29, 145, 135, 1), rgba(29, 145, 135, 0.6));
   @include small-screen {
     height: auto;
-    position: sticky;
-    top:0;
-    z-index: 100;
   }
 }
 

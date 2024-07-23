@@ -9,14 +9,10 @@
     color: $text-color-1;
     font-weight: 400;
   }
-}
 
-.column1 {
-  flex: 2;
-}
-
-.column2 {
-  flex: 1;
+  .column1, .column2 {
+    position: relative;
+  }
 }
 
 @media only screen and (max-width: 1240px) {
