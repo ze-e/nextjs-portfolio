@@ -15,3 +15,4 @@ export { default as Subtitle } from "@/components/Subtitle";
 export { default as TwoColumn } from "@/components/TwoColumn";
 export { default as Video } from "@/components/Video";
 export { default as Divider } from "@/components/Divider";
+export { default as Margin } from "@/components/Margin";

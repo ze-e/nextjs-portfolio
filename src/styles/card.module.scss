@@ -29,7 +29,7 @@
   }
 }
 
-.title {
+.title, .textCardBox {
   width: 100%;
   min-height: 56px;
   padding: 10px;
@@ -39,8 +39,18 @@
   color: white;
   margin-top: -14px;
   font-size: 24px;
-  // flex: 1 1 0px;
+  flex: 1 1 0px;
   border-radius: 0 0 12px 12px;
+}
+
+.textCardTitle {
+  font-weight: bold;
+}
+
+.textCardContent {
+  font-size: 18px;
+  margin-top: 8px;
+  opacity: .9;
 }
 
 @media only screen and (max-width: 768px) {

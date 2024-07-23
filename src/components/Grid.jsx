@@ -2,7 +2,7 @@ import React from 'react';
 import styles from '@/styles/grid.module.scss';
 import { Card, TextCard } from '@/components';
 
-export default function Grid({ items, type, orientation = "h" }) {
+export default function Grid({ items, type, orientation = "h", imageW="100%", imageH="100%" }) {
 
   return (
     <div className={
@@ -14,8 +14,8 @@ export default function Grid({ items, type, orientation = "h" }) {
           className={styles.itemContainer} 
           key={item.title}>
             {type === "text" ? 
-            <TextCard data={item}/> : 
-              <Card data={item} type={type}
+            <TextCard data={item} imageW={imageW} imageH={imageH}/> : 
+              <Card data={item} type={type} imageW={imageW} imageH={imageH}
             />}
         </div>)}
     </div>

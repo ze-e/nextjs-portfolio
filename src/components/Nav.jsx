@@ -47,9 +47,9 @@ export default function Nav({ backNav }) {
     <div className={styles.container}>
       {!backNav ? (
         <ul className={styles.navItems}>
-          {anchors.map(id => (
+          {anchors.map((id, index) => (
             <li key={id} className={styles.navItem}>
-              <span className={styles.pipe}>|</span>
+              {index > 0 && <span className={styles.pipe}>|</span>}
               <a
                 className={`${styles.link} ${id === activeAnchor ? styles.isActive : ''}`}
                 href={`#${id}`}
