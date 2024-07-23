@@ -62,13 +62,14 @@ export default function index() {
               opacity: 1,
               position:"absolute",
               top:0,
-              left:0
+              left:0,
+              zIndex: 1
             }}
           >
             <source src={video} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <Title style={{position:"absolute", top:"50%", left:"50%", transform: "translate(-50%, -50%)", width:"100%", height:"100%"}}>Get Started with Us Today</Title>
+          <Title style={{position:"absolute", top:"50%", left:"50%", transform: "translate(-50%, -50%)", width:"100%", height:"100%", zIndex: "2"}}>Get Started with Us Today</Title>
         </div>  
     </Layout>
   );
