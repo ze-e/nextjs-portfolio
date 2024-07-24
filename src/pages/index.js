@@ -1,8 +1,9 @@
 import React from 'react';
-import { Layout, LogoImg, TextBox, Text, Title, TwoColumn, Divider, Grid, Margin } from '@/components';
+import { Layout, LogoImg, TextBox, Text, Title, TwoColumn, Divider, Grid, Margin, PaymentCard, Services } from '@/components';
 
 import video from '@/assets/movie.mp4';
 import services from '@/data/services';
+import paymentInfo from '@/data/paymentInfo';
 // eslint-disable-next-line
 export default function index() {
   return (
@@ -46,7 +47,24 @@ export default function index() {
           </section>
             <Divider height={"20px"} background={"#000"}/>
       </Margin>
-        <div style={{position:"relative"}}>
+        <div className='overlay' style={{position:"relative", height:"300px"}}>
+          <Title style={{
+            position:"absolute", 
+            top:"50%", 
+            left:"50%", 
+            transform: "translate(-50%, -50%)", 
+            width:"100%", 
+            height:"100%", 
+            margin: 0, 
+            zIndex: 2, 
+            color:"white",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            textAlign: "center"
+            }}>
+              Get Started with Us Today
+          </Title>
           <video
             autoPlay
             muted
@@ -55,7 +73,7 @@ export default function index() {
             loop
             crossOrigin="anonymous"
             style={{
-              height: "200px",
+              height: "100%",
               width: "100%",
               objectFit: "cover",
               objectPosition: "center center",
@@ -69,8 +87,29 @@ export default function index() {
             <source src={video} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <Title style={{position:"absolute", top:"50%", left:"50%", transform: "translate(-50%, -50%)", width:"100%", height:"100%", zIndex: "2"}}>Get Started with Us Today</Title>
         </div>  
+        <section className="anchor" id="Services" >
+        <TextBox style={{display:"flex", alignItems:"center",justifyContent:"center", flexDirection:"column", background:"linear-gradient( #00262D, rgba(29, 145, 135, 0.6)"}}>
+            <Title style={{
+              color:"#F04AED",
+              }}>
+                Services & Prices
+            </Title>
+            <Text style={{color: "white"}}>
+              Choose the payment method that makes sense for your business&apos;s budget
+            </Text>
+            <Text style={{color: "white"}}>
+              <strong><em>For a limited time, we are offering &quot;early bird&quot; discounted prices on ALL our services!</em></strong>
+            </Text>
+            <Services />
+            <div style={{display:"flex", flexWrap:"wrap"}}>
+              {paymentInfo.map(i =>
+                <PaymentCard data={i}/>
+              )}
+            </div>
+            <small><em>*Price may vary by project scope</em></small>
+          </TextBox>
+        </section>
     </Layout>
   );
 }

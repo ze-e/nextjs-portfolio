@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from "@/styles/title.module.scss";
-export default function Title({children}) {
+export default function Title({children, ...props}) {
   return (
-    <h2 className={styles.title}>{children}</h2>
+    <h2 className={styles.title} style={props.style}>{children}</h2>
   )
 }

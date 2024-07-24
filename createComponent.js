@@ -30,7 +30,7 @@ const exportLine = `\nexport { default as ${componentName} } from '@/components/
 fs.appendFileSync(indexFilePath, exportLine);
 
 // 3. Create the styles file with the template
-const stylesFilePath = path.join(__dirname, 'src/styles', `${componentName}.module.scss`);
+const stylesFilePath = path.join(__dirname, 'src/styles', `${componentName.toLowerCase()}.module.scss`);
 const stylesTemplate = `.container {
 /* insert style */
 }
