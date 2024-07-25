@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, LogoImg, TextBox, Text, Title, TwoColumn, Divider, Grid, Margin, PaymentCard, Services } from '@/components';
+import { Layout, LogoImg, TextBox, Text, Title, TwoColumn, Divider, Grid, Margin, PaymentCard, Services, ContactForm } from '@/components';
 
 import video from '@/assets/movie.mp4';
 import services from '@/data/services';
@@ -24,7 +24,7 @@ export default function index() {
             <LogoImg/>
           } />
           </section>
-            <Divider height={"10px"} background={"#000"}/>
+            <Divider height={"10px"}/>
           <TwoColumn column_1_maxW={"490px"}  column1={
             <Grid items={services} type="text" orientation="v" />
           }
@@ -43,7 +43,7 @@ export default function index() {
               </TextBox>
             </section>
           } />
-        <Divider height={"20px"} background={"#000"}/>
+        <Divider height={"20px"}/>
       </Margin>
         <div className='overlay' style={{position:"relative", height:"300px"}}>
           <Title style={{
@@ -99,13 +99,17 @@ export default function index() {
                 <strong><em>For a limited time, we are offering &quot;early bird&quot; discounted prices on ALL our services!</em></strong>
               </Text>
               <Services />
-              <Divider height={"20px"} background={"#000"}/>
+              <Divider height={"20px"}/>
               <div style={{display:"flex", flexWrap:"wrap", gap:"4px"}}>
                 {paymentInfo.map(i =>
                   <PaymentCard data={i} key={i}/>
                 )}
               </div>
               <div style={{alignSelf: "end", color: "white"}}><small><em>* Price may vary by project scope</em></small></div>
+            </TextBox>
+            <Divider height={"20px"}/>
+            <TextBox>
+              <ContactForm />
             </TextBox>
           </Margin>
         </section>
