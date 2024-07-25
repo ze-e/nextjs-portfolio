@@ -108,9 +108,12 @@ export default function index() {
               <div style={{alignSelf: "end", color: "white"}}><small><em>* Price may vary by project scope</em></small></div>
             </TextBox>
             <Divider height={"20px"}/>
-            <TextBox>
-              <ContactForm />
-            </TextBox>
+            <section className="anchor button" id="Contact">
+              <TextBox style={{maxWidth: "30%", margin: "0 auto"}}>
+                <ContactForm />
+              </TextBox>
+            </section>
+
           </Margin>
         </section>
     </Layout>

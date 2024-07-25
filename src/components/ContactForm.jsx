@@ -53,6 +53,7 @@ const ContactForm = () => {
           required
         />
       </div>
+      <br/>
       <div>
         <label htmlFor="subject">Subject:</label>
         <input
@@ -64,6 +65,7 @@ const ContactForm = () => {
           required
         />
       </div>
+      <br/>
       <div>
         <label htmlFor="message">Message:</label>
         <textarea
@@ -74,7 +76,8 @@ const ContactForm = () => {
           required
         ></textarea>
       </div>
-      <button type="submit">Send</button>
+      <br/>
+      <button type="submit">Send!</button>
     </form>
   );
 };

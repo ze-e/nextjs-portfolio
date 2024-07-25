@@ -17,9 +17,6 @@ export default function Services() {
       </ul>
       <br/>
       <StrongText>...and more!</StrongText>
-      <br/>
-      <br/>
-      <StrongText>Contact us at <a href='mailto:zrexwebdev@gmail.com'>zrexwebdev@gmail.com</a> for a free one-on-one consultation​</StrongText>
-    </div>
+   </div>
     )
 }
