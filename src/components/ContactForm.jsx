@@ -6,7 +6,6 @@ import {Title, Text} from '@/components/index'
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     userEmail: '',
-    subject: '',
     message: ''
   });
 
@@ -36,7 +35,6 @@ const ContactForm = () => {
 
     setFormData({
       userEmail: '',
-      subject: '',
       message: ''
     });
   };
@@ -54,18 +52,7 @@ const ContactForm = () => {
           value={formData.userEmail}
           onChange={handleChange}
           required
-        />
-      </div>
-      <br/>
-      <div style={{display: "flex", flexDirection: "column"}}>
-        <label htmlFor="subject">Subject:</label>
-        <input
-          type="text"
-          id="subject"
-          name="subject"
-          value={formData.subject}
-          onChange={handleChange}
-          required
+          placeholder='Type your email here...'
         />
       </div>
       <br/>
@@ -78,6 +65,7 @@ const ContactForm = () => {
           value={formData.message}
           onChange={handleChange}
           required
+          placeholder='How can we help you?'
         ></textarea>
       </div>
       <br/>
