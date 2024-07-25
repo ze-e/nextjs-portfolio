@@ -53,8 +53,8 @@ export default function Nav({ backNav }) {
           <Image className={styles.image} src={logo} alt="logo"/>
           <ul className={styles.navItems}>
             {anchors.map((id, index) => (
-              <li key={id} className={`${styles.navItem} ${styles.button}`}>
-                {index > 0 && <span className={styles.pipe}>|</span>}
+              <li key={id} className={`${styles.navItem} ${id === "Contact" && styles.button}`}>
+                {(index > 0 && id !== "Contact") && <span className={styles.pipe}>|</span>}
                 <a
                   className={`${styles.link} ${id === activeAnchor ? styles.isActive : ''}`}
                   href={`#${id}`}

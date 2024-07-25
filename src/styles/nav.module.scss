@@ -16,8 +16,9 @@
 }
 
 .button {
-  border: 1px solid white;
+  border: 5px solid white;
   padding: 6px;
+  border-radius: 10px;
   &:hover {
     transform: translate(4px, 4px);
   }
