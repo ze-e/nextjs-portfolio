@@ -2,7 +2,7 @@
 @import './_mixins';
 
 .container {
-  height: 72px;
+  height: 80px;
   width: 100vw;
   padding-left: 10px;
   padding-right: 10px;
@@ -16,7 +16,7 @@
 }
 
 .button {
-  border: 5px solid white;
+  box-shadow:inset 0px 0px 0px 10px #fff;
   padding: 6px;
   border-radius: 10px;
   &:hover {
