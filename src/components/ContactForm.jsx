@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import styles from '@/styles/contactform.module.scss';
+import {Title, Text} from '@/components/index'
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -42,7 +43,9 @@ const ContactForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className={styles.container}>
-      <div>
+      <Title style={{color: 'white', }}>Contact Us</Title>
+      <Text style={{color: 'white', }}>Contact us for a free 1-on-1 consultation</Text>
+      <div style={{display: "flex", flexDirection: "column"}}>
         <label htmlFor="userEmail">Email:</label>
         <input
           type="email"
@@ -54,7 +57,7 @@ const ContactForm = () => {
         />
       </div>
       <br/>
-      <div>
+      <div style={{display: "flex", flexDirection: "column"}}>
         <label htmlFor="subject">Subject:</label>
         <input
           type="text"
@@ -66,18 +69,21 @@ const ContactForm = () => {
         />
       </div>
       <br/>
-      <div>
+      <div style={{display: "flex", flexDirection: "column"}}>
         <label htmlFor="message">Message:</label>
         <textarea
           id="message"
           name="message"
+          rows="5"
           value={formData.message}
           onChange={handleChange}
           required
         ></textarea>
       </div>
       <br/>
-      <button type="submit">Send!</button>
+      <button className={styles.button} type="submit">
+        Send!
+      </button>
     </form>
   );
 };

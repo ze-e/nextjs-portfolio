@@ -1,3 +1,22 @@
 .container {
     color: white;
+
+    input {
+        height: 30px;
+        font-size: 16px;
+        border-radius: 20px;
+    }
+
+    label {
+        margin-bottom: 4px;
+    }
+}
+
+.button {
+    appearance:none;
+    background: none;
+    border: 3px solid white;
+    border-radius: 20px;
+    color: white;
+    padding: 3px;
 }

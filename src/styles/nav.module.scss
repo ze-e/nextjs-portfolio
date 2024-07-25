@@ -16,13 +16,13 @@
 }
 
 .button {
-  box-shadow:inset 0px 0px 0px 10px #fff;
+  margin-left: 12px;
+  box-shadow:inset 0px 0px 0px 2px #fff;
   padding: 6px;
   border-radius: 10px;
   &:hover {
     transform: translate(4px, 4px);
   }
-  box-shadow: 10px 10px 40px 5px rgba(140,140,140,1);
 }
 
 .navContainer {

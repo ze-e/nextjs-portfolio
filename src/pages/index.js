@@ -109,7 +109,7 @@ export default function index() {
             </TextBox>
             <Divider height={"20px"}/>
             <section className="anchor" id="Contact">
-              <TextBox style={{maxWidth: "30%", margin: "0 auto"}}>
+              <TextBox style={{width: "60%", margin: "0 auto", border: "3px solid white" }}>
                 <ContactForm />
               </TextBox>
             </section>
