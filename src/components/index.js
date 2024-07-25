@@ -19,3 +19,5 @@ export { default as Margin } from "@/components/Margin";
 export { default as PaymentCard } from '@/components/PaymentCard';
 
 export { default as Services } from '@/components/Services';
+
+export { default as ContactForm } from '@/components/ContactForm';
