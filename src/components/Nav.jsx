@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import styles from '@/styles/nav.module.scss';
 import { useRouter } from 'next/router';
 import { inconsolata } from "@/utils/fonts";
+import Image from 'next/image';
+
+import logo from "@/assets/brand/robo-ico.png"
 
 export default function Nav({ backNav }) {
   const router = useRouter();
@@ -16,7 +19,7 @@ export default function Nav({ backNav }) {
     const observerOptions = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.5
+      threshold: 0.1
     };
 
     const observerCallback = (entries) => {
@@ -46,20 +49,23 @@ export default function Nav({ backNav }) {
   return (
     <div className={styles.container}>
       {!backNav ? (
-        <ul className={styles.navItems}>
-          {anchors.map((id, index) => (
-            <li key={id} className={styles.navItem}>
-              {index > 0 && <span className={styles.pipe}>|</span>}
-              <a
-                className={`${styles.link} ${id === activeAnchor ? styles.isActive : ''}`}
-                href={`#${id}`}
-                onClick={handleLinkClick(id)}
-              >
-                {id}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div className={styles.navContainer}>
+          <Image className={styles.image} src={logo} alt="logo"/>
+          <ul className={styles.navItems}>
+            {anchors.map((id, index) => (
+              <li key={id} className={styles.navItem}>
+                {index > 0 && <span className={styles.pipe}>|</span>}
+                <a
+                  className={`${styles.link} ${id === activeAnchor ? styles.isActive : ''}`}
+                  href={`#${id}`}
+                  onClick={handleLinkClick(id)}
+                >
+                  {id}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       ) : (
         <div className={styles.backContainer}>
           <button

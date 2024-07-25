@@ -1,3 +1,17 @@
+@import './_globals';
+
 .container {
-/* insert style */
+    color: white;
+    font-size: 18px;
+    a {
+        color: $text-color-2;
+    }
+}
+
+.strongText {
+    font-size: 24px;
+}
+
+.service {
+    margin: 2px;
 }

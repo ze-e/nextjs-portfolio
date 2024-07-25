@@ -1,3 +1,27 @@
+@import './_globals';
+
 .container {
-/* insert style */
+    background: #002026;
+    color: #fff;
+    border: 3px solid #fff;
+    border-radius: 30px;
+    width: calc(33% - 20px);
+    font-size: 24px;
+    padding: 16px;
+    margin: 10px;
+    box-shadow: 10px 10px 12px -6px rgba(63,0,67,0.6);
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.newPrice {
+    color:  $text-color-2;
+    font-weight: bold;
 }

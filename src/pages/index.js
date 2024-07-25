@@ -24,28 +24,26 @@ export default function index() {
             <LogoImg/>
           } />
           </section>
-          <section className="anchor" id="What We Do">
             <Divider height={"10px"} background={"#000"}/>
           <TwoColumn column_1_maxW={"490px"}  column1={
             <Grid items={services} type="text" orientation="v" />
           }
           column2={
-            <div style={{position: "sticky", top: 100}}>
+            <section className="anchor" id="What We Do" style={{position: "sticky", top: 100}}>
               <TextBox>
-                <Title>
-                  Innovate, Automate, Elevate
-                </Title>
-                <Text>
-                At Rex Teq, we specialize in transforming your digital presence and automating your business processes.
-                Our services include web development, building a social media presence, expert consulting to streamline workflows and enhance efficiency, 
-                and advanced AI automation solutions to create custom chatbots and applications tailored to your needs.
-                Let us help you leverage technology to drive growth and innovation in your business.
-                </Text>
+                  <Title>
+                    Innovate, Automate, Elevate
+                  </Title>
+                  <Text>
+                  At Rex Teq, we specialize in transforming your digital presence and automating your business processes.
+                  Our services include web development, building a social media presence, expert consulting to streamline workflows and enhance efficiency, 
+                  and advanced AI automation solutions to create custom chatbots and applications tailored to your needs.
+                  Let us help you leverage technology to drive growth and innovation in your business.
+                  </Text>
               </TextBox>
-            </div>
+            </section>
           } />
-          </section>
-            <Divider height={"20px"} background={"#000"}/>
+        <Divider height={"20px"} background={"#000"}/>
       </Margin>
         <div className='overlay' style={{position:"relative", height:"300px"}}>
           <Title style={{
@@ -89,26 +87,27 @@ export default function index() {
           </video>
         </div>  
         <section className="anchor" id="Services" >
-        <TextBox style={{display:"flex", alignItems:"center",justifyContent:"center", flexDirection:"column", background:"linear-gradient( #00262D, rgba(29, 145, 135, 0.6)"}}>
-            <Title style={{
-              color:"#F04AED",
-              }}>
-                Services & Prices
-            </Title>
-            <Text style={{color: "white"}}>
-              Choose the payment method that makes sense for your business&apos;s budget
-            </Text>
-            <Text style={{color: "white"}}>
-              <strong><em>For a limited time, we are offering &quot;early bird&quot; discounted prices on ALL our services!</em></strong>
-            </Text>
-            <Services />
-            <div style={{display:"flex", flexWrap:"wrap"}}>
-              {paymentInfo.map(i =>
-                <PaymentCard data={i}/>
-              )}
-            </div>
-            <small><em>*Price may vary by project scope</em></small>
-          </TextBox>
+          <Margin>
+            <TextBox style={{display:"flex", alignItems:"center",justifyContent:"center", flexDirection:"column", background:"linear-gradient( #00262D, rgba(29, 145, 135, 0.6)"}}>
+              <Title style={{
+                color:"#F04AED",
+                }}>
+                  Services & Prices
+              </Title>
+              <Text style={{color: "white"}}>
+                Choose the payment method that makes sense for your business&apos;s budget<br/>
+                <strong><em>For a limited time, we are offering &quot;early bird&quot; discounted prices on ALL our services!</em></strong>
+              </Text>
+              <Services />
+              <Divider height={"20px"} background={"#000"}/>
+              <div style={{display:"flex", flexWrap:"wrap", gap:"4px"}}>
+                {paymentInfo.map(i =>
+                  <PaymentCard data={i} key={i}/>
+                )}
+              </div>
+              <div style={{alignSelf: "end", color: "white"}}><small><em>* Price may vary by project scope</em></small></div>
+            </TextBox>
+          </Margin>
         </section>
     </Layout>
   );

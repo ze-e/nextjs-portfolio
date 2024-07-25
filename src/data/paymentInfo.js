@@ -10,8 +10,8 @@ const info = [
       "Book me at an hourly rate for as long or as short as you need us.",
       "Great for tech consulting or odds and ends.",
     ],
-    oldPrice:"$45 ph",
-    newPrice:"$35 ph"
+    oldPrice:"$45ph",
+    newPrice:"$35ph"
   },
   {
     img:Box,
