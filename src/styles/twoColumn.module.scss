@@ -33,6 +33,12 @@
   .twoColumn {
     padding-top: 0;
     flex-direction: column-reverse;
+
+    max-width: none;
+
+    &.lockH {
+      flex-direction: row;
+    }
   }
 
   .column1 {

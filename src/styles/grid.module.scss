@@ -28,9 +28,19 @@
   .container {
     justify-content: center;
   }
-  
+
+  .container.text {
+    align-items: center;
+    justify-content: center;
+  }
+
   .itemContainer {
     width:calc(50% - 20px);
+  }
+
+  .itemContainer.text {
+    width: 100%;
+    margin: 0px;
   }
 }
 
@@ -42,5 +52,9 @@
   .itemContainer {
     width: 100%;
     margin-right: 0;
+  }
+
+  .itemContainer.text {
+    margin: 0px;
   }
 }

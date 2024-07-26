@@ -11,7 +11,7 @@ export default function Grid({ items, type, orientation = "h", imageW="100%", im
       }`}>
       {items.map(item => 
         <div 
-          className={styles.itemContainer} 
+          className={`${styles.itemContainer} ${type === "text" && styles.text}`} 
           key={item.title}>
             {type === "text" ? 
             <TextCard data={item} imageW={imageW} imageH={imageH}/> : 

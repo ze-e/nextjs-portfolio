@@ -41,9 +41,9 @@ const ContactForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className={styles.container}>
-      <Title style={{color: 'white', }}>Contact Us</Title>
-      <Text style={{color: 'white', }}>Contact us for a free 1-on-1 consultation</Text>
-      <div style={{display: "flex", flexDirection: "column"}}>
+      <Title style={{color: 'white' }}>Contact Us</Title>
+      <Text style={{color: 'white' }}>Contact us for a free 1-on-1 consultation</Text>
+      <div className={styles.formItem}>
         <label htmlFor="userEmail">Email:</label>
         <input
           type="email"
@@ -56,7 +56,7 @@ const ContactForm = () => {
         />
       </div>
       <br/>
-      <div style={{display: "flex", flexDirection: "column"}}>
+      <div className={styles.formItem}>
         <label htmlFor="message">Message:</label>
         <textarea
           id="message"
