@@ -95,7 +95,7 @@
   color: $text-color-1;
   font-size: 32px;
   @include small-screen {
-    font-size: 18px;
+    // font-size: 18px;
     text-align: center;
     margin: 15px 0;
   }
@@ -160,9 +160,8 @@
   }
 }
 
-@media only screen and (max-width: 320px) {
-  .navItem, .backButton {
-    font-size: 14px;
-    text-align: center;
-  }
-}
+// @media only screen and (max-width: 320px) {
+//   .navItem, .backButton {
+//     text-align: center;
+//   }
+// }
