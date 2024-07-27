@@ -5,6 +5,7 @@ import { inconsolata } from "@/utils/fonts";
 import Image from 'next/image';
 
 import logo from "@/assets/brand/robo-ico.png"
+import { HideOnDesktop } from '.';
 
 export default function Nav({ backNav }) {
   const router = useRouter();
@@ -83,6 +84,15 @@ export default function Nav({ backNav }) {
           <button className={styles.hamburger} onClick={toggleMenu}>
             ☰
           </button>
+          <HideOnDesktop>
+            <div className={`${styles.styles.navItem} ${styles.button}`}>
+              <a
+                className={styles.link}
+                href={`#Contact`}
+                onClick={handleLinkClick(id)}
+              >Contact</a>
+            </div>
+          </HideOnDesktop>
         </div>
       ) : (
         <div className={styles.backContainer}>
