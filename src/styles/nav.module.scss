@@ -136,6 +136,7 @@
   cursor: pointer;
   @include small-screen {
     display: block;
+    margin-right: 10px;
   }
 }
 
