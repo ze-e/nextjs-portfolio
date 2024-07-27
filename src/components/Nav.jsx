@@ -85,7 +85,7 @@ export default function Nav({ backNav }) {
             ☰
           </button>
           <HideOnDesktop>
-            <div className={`${styles.styles.navItem} ${styles.button}`}>
+            <div className={`${styles.navItem} ${styles.button}`}>
               <a
                 className={styles.link}
                 href={`#Contact`}
