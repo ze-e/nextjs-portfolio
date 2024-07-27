@@ -33,7 +33,7 @@
   .twoColumn {
     padding-top: 0;
     flex-direction: column-reverse;
-
+    justify-content: center;
     max-width: none;
 
     &.lockH {

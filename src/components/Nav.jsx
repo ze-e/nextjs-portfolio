@@ -10,6 +10,7 @@ export default function Nav({ backNav }) {
   const router = useRouter();
   const [anchors, setAnchors] = useState([]);
   const [activeAnchor, setActiveAnchor] = useState(null);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const anchorElements = document.querySelectorAll('.anchor');
@@ -44,14 +45,28 @@ export default function Nav({ backNav }) {
     if (targetElement) {
       targetElement.scrollIntoView({ behavior: 'smooth' });
     }
+    setMenuOpen(false); // Close menu on link click
+  };
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
   };
 
   return (
     <div className={styles.container}>
       {!backNav ? (
         <div className={styles.navContainer}>
-          <Image className={styles.image} src={logo} alt="logo"/>
-          <ul className={styles.navItems}>
+          <Image className={styles.image} src={logo} alt="logo" />
+          <ul className={`${styles.navItems} ${menuOpen ? styles.navItemsOpen : ''}`}>
+            {menuOpen && (
+              <li className={styles.closeButton} onClick={closeMenu}>
+                X
+              </li>
+            )}
             {anchors.map((id, index) => (
               <li key={id} className={`${styles.navItem} ${id === "Contact" && styles.button}`}>
                 {(index > 0 && id !== "Contact") && <span className={styles.pipe}>|</span>}
@@ -65,6 +80,9 @@ export default function Nav({ backNav }) {
               </li>
             ))}
           </ul>
+          <button className={styles.hamburger} onClick={toggleMenu}>
+            ☰
+          </button>
         </div>
       ) : (
         <div className={styles.backContainer}>

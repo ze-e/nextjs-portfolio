@@ -29,6 +29,14 @@
     justify-content: center;
   }
 
+  .container {
+    &.vertical {
+      .itemContainer {
+        margin: 0px;
+      }
+    }
+  }
+
   .container.text {
     align-items: center;
     justify-content: center;
@@ -54,7 +62,7 @@
     margin-right: 0;
   }
 
-  .itemContainer.text {
+  .text {
     margin: 0px;
   }
 }

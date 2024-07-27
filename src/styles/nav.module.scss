@@ -9,7 +9,7 @@
   position: fixed;
   top: 0;
   z-index: 100;
-  background-image: linear-gradient( rgb(29, 145, 135), rgb(32, 154, 144));
+  background-image: linear-gradient(rgb(29, 145, 135), rgb(32, 154, 144));
   @include small-screen {
     height: auto;
   }
@@ -17,17 +17,40 @@
 
 .button {
   margin-left: 12px;
-  box-shadow:inset 0px 0px 0px 2px #fff;
+  box-shadow: inset 0px 0px 0px 2px #fff;
   padding: 6px;
   border-radius: 10px;
   &:hover {
     transform: translate(4px, 4px);
+    @include small-screen {
+      box-shadow: inset 0px 0px 0px 2px $text-color-2;
+      transform: none;
+    }
+  }
+}
+
+.button {
+  &:hover {
+    .link {
+      @include small-screen {
+        color: $text-color-2;
+      }
+    }
+  }
+}
+
+.link {
+  &:hover {
+    @include small-screen {
+      color: $text-color-2;
+    }
   }
 }
 
 .navContainer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .image {
@@ -48,9 +71,23 @@
 
 .navItems {
   @include small-screen {
-    text-align: center;
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
     justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 101;
   }
+}
+
+.navItemsOpen {
+  display: flex;
 }
 
 .navItem, .backButton {
@@ -58,8 +95,15 @@
   color: $text-color-1;
   font-size: 32px;
   @include small-screen {
-    font-size: 16px;
+    font-size: 18px;
     text-align: center;
+    margin: 15px 0;
+  }
+
+  &:hover {
+    @include small-screen {
+      color: $text-color-2;
+    }
   }
 }
 
@@ -71,7 +115,7 @@
   appearance: none;
   border: none;
   background: none;
-  &:hover{
+  &:hover {
     text-decoration: none;
   }
 }
@@ -79,4 +123,46 @@
 .pipe {
   margin-left: 10px;
   margin-right: 10px;
+  @include small-screen {
+    display: none;
+  }
+}
+
+.hamburger {
+  display: none;
+  font-size: 32px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  @include small-screen {
+    display: block;
+    margin-right: 10px;
+  }
+}
+
+.closeButton {
+  display: none;
+  font-size: 32px;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  @include small-screen {
+    display: block;
+  }
+
+  &:hover {
+    @include small-screen {
+      color: $text-color-2;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .navItem, .backButton {
+    font-size: 14px;
+    text-align: center;
+  }
 }

@@ -35,23 +35,23 @@ export default function index() {
             </section>
           }
           column2={
-            <HideOnMobile>
               <div style={{ position: "sticky", top: 100 }}>
-                <TextBox>
-                  <Title>Innovate, Automate, Elevate</Title>
-                  <Text>
-                    At Rex Teq, we specialize in transforming your digital
-                    presence and automating your business processes. Our services
-                    include web development, building a social media presence,
-                    expert consulting to streamline workflows and enhance
-                    efficiency, and advanced AI automation solutions to create
-                    custom chatbots and applications tailored to your needs. Let
-                    us help you leverage technology to drive growth and innovation
-                    in your business.
-                  </Text>
-                </TextBox>
+                <HideOnMobile>
+                  <TextBox>
+                    <Title>Innovate, Automate, Elevate</Title>
+                    <Text>
+                      At Rex Teq, we specialize in transforming your digital
+                      presence and automating your business processes. Our services
+                      include web development, building a social media presence,
+                      expert consulting to streamline workflows and enhance
+                      efficiency, and advanced AI automation solutions to create
+                      custom chatbots and applications tailored to your needs. Let
+                      us help you leverage technology to drive growth and innovation
+                      in your business.
+                    </Text>
+                  </TextBox>
+                </HideOnMobile>
               </div>
-            </HideOnMobile>
           }
         />
         <Divider height={"20px"} />
@@ -110,7 +110,7 @@ export default function index() {
             justifyContent: "center",
             flexDirection: "column",
             background: "linear-gradient( #00262D, rgba(29, 145, 135, 0.6)",
-            border: "0 0 12px 12px",
+            borderRadius: "0 0 12px 12px",
           }}
         >
           <Title
@@ -149,9 +149,9 @@ export default function index() {
       <section className="anchor" id="Contact">
         <TextBox
           style={{
-            width: "60%",
             margin: "0 auto",
             border: "3px solid white",
+            maxWidth: "1000px"
           }}
         >
           <ContactForm />
