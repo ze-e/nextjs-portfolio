@@ -109,8 +109,8 @@ export default function index() {
             alignItems: "center",
             justifyContent: "center",
             flexDirection: "column",
-            background: "linear-gradient( #00262D, rgba(29, 145, 135, 0.6)",
             borderRadius: "0 0 12px 12px",
+            background: "linear-gradient( #00262D, rgba(29, 145, 135, 0.6)",
           }}
         >
           <Title
