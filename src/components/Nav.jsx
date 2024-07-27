@@ -89,7 +89,7 @@ export default function Nav({ backNav }) {
               <a
                 className={styles.link}
                 href={`#Contact`}
-                onClick={handleLinkClick(id)}
+                onClick={handleLinkClick("Contact")}
               >Contact</a>
             </div>
           </HideOnDesktop>
