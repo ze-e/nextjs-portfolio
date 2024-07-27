@@ -37,7 +37,7 @@ const ContactForm = () => {
 
     try {
       await emailjs.send(serviceID, templateID, formData, userID);
-      console.log('Email successfully sent!', result.text);
+      console.log('Email successfully sent!');
       setFormSent(true);
     }
     catch (e) {
@@ -56,8 +56,11 @@ const ContactForm = () => {
 
   return (formSent ? 
     (<div className={error ? styles.error : styles.formSent}>{
+      
       error ? 
-      error : "Form sent successfully!"}</div>) : 
+      <Title style={{color: 'red' }}>{error}</Title>: 
+      <Title style={{color: 'white' }}>Thank you! We will contact you shortly ☺</Title>
+      }</div>) : 
       (<form onSubmit={handleSubmit} className={styles.container}>
         <Title style={{color: 'white' }}>Contact Us</Title>
         <Text style={{color: 'white', marginBottom: "30px" }}>Contact us for a free 1-on-1 consultation</Text>
