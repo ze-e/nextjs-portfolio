@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from "@/styles/Services.module.scss"
+import styles from "@/styles/services.module.scss"
 import service_list from "@/data/service_list"
 
 export default function Services() {
