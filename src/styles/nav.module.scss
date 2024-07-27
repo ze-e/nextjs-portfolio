@@ -95,7 +95,6 @@
   color: $text-color-1;
   font-size: 32px;
   @include small-screen {
-    // font-size: 18px;
     text-align: center;
     margin: 15px 0;
   }
@@ -137,7 +136,6 @@
   cursor: pointer;
   @include small-screen {
     display: block;
-    margin-right: 10px;
   }
 }
 
