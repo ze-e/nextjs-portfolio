@@ -28,7 +28,7 @@ if (indexFileContent.includes(`export { default as ${componentName.toLowerCase()
 
 // 1. Create the component file with the template
 const componentTemplate = `import React from 'react'
-import styles from "@/styles/${componentName}.module.scss"
+import styles from "@/styles/${componentName.toLowerCase()}.module.scss"
 export default function ${componentName}({...props}) {
   return (
     <div className={styles.container}>
