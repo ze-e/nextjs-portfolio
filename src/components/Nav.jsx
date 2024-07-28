@@ -61,8 +61,6 @@ export default function Nav({ backNav }) {
     <div className={styles.container}>
       {!backNav ? (
         <div className={styles.navContainer}>
-          <Image className={styles.image} src={logo} alt="logo" />
-          <div>
             <HideOnDesktop>
               <div className={`${styles.navItem} ${styles.button}`}>
                 <a
@@ -72,6 +70,7 @@ export default function Nav({ backNav }) {
                 >Contact Us</a>
               </div>
             </HideOnDesktop>
+          <Image className={styles.image} src={logo} alt="logo" />
             <ul className={`${styles.navItems} ${menuOpen ? styles.navItemsOpen : ''}`}>
               {menuOpen && (
                 <li className={styles.closeButton} onClick={closeMenu}>
@@ -91,7 +90,6 @@ export default function Nav({ backNav }) {
                 </li>
               ))}
             </ul>
-          </div>
           <button className={styles.hamburger} onClick={toggleMenu}>
             ☰
           </button>
