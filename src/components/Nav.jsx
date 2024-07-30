@@ -81,7 +81,8 @@ export default function Nav({ backNav }) {
                 <li key={id} className={`${styles.navItem} ${id === "Contact" && styles.button}`}>
                   {(index > 0 && id !== "Contact") && <span className={styles.pipe}>|</span>}
                   <a
-                    className={`${styles.link} ${(id === activeAnchor && id !== "Contact") ? styles.isActive : ''}`}
+                    // className={`${styles.link} ${(id === activeAnchor && id !== "Contact") ? styles.isActive : ''}`}
+                    className={`${styles.link}`}
                     href={`#${id}`}
                     onClick={handleLinkClick(id)}
                   >
