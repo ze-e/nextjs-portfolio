@@ -60,17 +60,9 @@ export default function Nav({ backNav }) {
   return (
     <div className={styles.container}>
       {!backNav ? (
+        <>
+        <Image className={styles.image} src={logo} alt="logo" />
         <div className={styles.navContainer}>
-            <HideOnDesktop>
-              <div className={`${styles.navItem} ${styles.button}`}>
-                <a
-                  className={styles.link}
-                  href={`#Contact`}
-                  onClick={handleLinkClick("Contact")}
-                >Contact Us</a>
-              </div>
-            </HideOnDesktop>
-          <Image className={styles.image} src={logo} alt="logo" />
             <ul className={`${styles.navItems} ${menuOpen ? styles.navItemsOpen : ''}`}>
               {menuOpen && (
                 <li className={styles.closeButton} onClick={closeMenu}>
@@ -91,10 +83,20 @@ export default function Nav({ backNav }) {
                 </li>
               ))}
             </ul>
-          <button className={styles.hamburger} onClick={toggleMenu}>
-            ☰
-          </button>
-        </div>
+            <button className={styles.hamburger} onClick={toggleMenu}>
+              ☰
+            </button>
+            <HideOnDesktop>
+              <div className={`${styles.navItem} ${styles.button} ${styles.mobileContact}`}>
+                <a
+                  className={styles.link}
+                  href={`#Contact`}
+                  onClick={handleLinkClick("Contact")}
+                >Contact Us</a>
+              </div>
+            </HideOnDesktop>
+          </div>
+          </>
       ) : (
         <div className={styles.backContainer}>
           <button
