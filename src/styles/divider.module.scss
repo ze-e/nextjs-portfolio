@@ -4,8 +4,9 @@
 .container {
     @include centered;
     background: "#000";
-    margin-bottom: 20px;
-    margin-top: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    box-sizing: content-box;
 }
 
 .image {
