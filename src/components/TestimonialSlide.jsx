@@ -9,16 +9,17 @@ export default function TestimonialSlide({data}) {
       <div className={styles.quoteContainer}>
         <div className={styles.quote}>
           {data?.testimonial}
+          <div className={styles.attribution}>
+            {" "}--{" "}{data?.name}<br/>
+            {" "}{data?.position}{" "}<br/>
+            {" "}{data?.company}{" "}
+          </div>
         </div>
         <div className={styles.image}>
           {data?.img && (<Image src={data.img} alt={data.name}/>)}
         </div>
       </div>
-      <div className={styles.attribution}>
-        {" "}--{" "}{data?.name}<br/>
-        {" "}{data?.position}{" "}<br/>
-        {" "}{data?.company}{" "}
-      </div>
+
     </div>
     )
 }
