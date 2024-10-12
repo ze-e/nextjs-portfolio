@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, LogoImg, TextBox, Text, Title, TwoColumn, Divider, Grid, Margin, PaymentCard, Services, ContactForm, Payments, HideOnMobile } from '@/components';
+import { Layout, Testimonials, LogoImg, TextBox, Text, Title, TwoColumn, Divider, Grid, Margin, PaymentCard, Services, ContactForm, Payments, HideOnMobile } from '@/components';
 
 import video from '@/assets/movie.mp4';
 import services from '@/data/services';
@@ -146,7 +146,11 @@ export default function index() {
           </div>
         </TextBox>
       </section>
-      <Divider height={"20px"} />
+      <section className="anchor" id="Testimonials">
+      <Margin>
+        <Testimonials />
+      </Margin>
+      </section>
       <section className="anchor" id="Contact">
         <TextBox
           style={{

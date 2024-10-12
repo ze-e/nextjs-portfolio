@@ -27,3 +27,7 @@ export { default as Payments } from '@/components/Payments';
 export { default as HideOnMobile } from '@/components/HideOnMobile';
 
 export { default as HideOnDesktop } from '@/components/HideOnDesktop';
+
+export { default as Testimonials } from '@/components/Testimonials';
+
+export { default as TestimonialSlide } from '@/components/TestimonialSlide';

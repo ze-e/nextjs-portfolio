@@ -1,0 +1,11 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .splide__track .splide__list {
+        padding-left:20px !important;
+        padding-right:20px !important;
+    }
+}
+

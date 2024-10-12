@@ -1,0 +1,59 @@
+.container {
+    min-height: 330px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    max-width: 48%;
+    margin: auto;
+}
+
+.quoteContainer{
+    display: flex;
+}
+
+.quote {
+    font-size: 1.4vw;
+    font-family: cursive;
+    font-style: italic;
+    &::after, &::before {
+        content: '"';
+    }
+}
+
+.attribution {
+    font-size: 1.2vw;
+    margin-top: 12px;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        height: 300px;
+        margin-bottom: 5px;
+    }
+
+    .quote {
+        font-size: 20px;
+    }
+
+    .quoteContainer{
+        flex-direction: column;
+    }
+
+    .attribution {
+        font-size: 18px;
+    }
+  }
+
+  @media only screen and (max-width: 390px) {
+    .quote {
+        font-size: 16px;
+    }
+
+    .attribution {
+        font-size: 14px;
+    }
+  }
