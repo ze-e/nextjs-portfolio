@@ -1,27 +1,30 @@
-import KatieImg from '@/assets/client-photos/katie.png'
+import KatieQ from '@/assets/client-photos/katie.png'
+import GregUttal from '@/assets/client-photos/Greg_Uttal.jpg'
+import JuliWoods from '@/assets/client-photos/Juli_Woods.jpg'
+import StarSpirit from '@/assets/client-photos/star_spirit.jpg'
 
 export const testimonial_data = [{
-    img:KatieImg,
+    img:KatieQ,
     name:"Katie Quirarte",
     company:"KQBookkeeping",
-    position:"CEO, founder",
+    position:"Owner, Book Keeper",
     testimonial:"Rex designed my website for my bookkeeping business and he was such a pleasure to work with!  He was extremely responsive, thorough and creative.  My website looks better than I could have ever imagined and I owe it all to Rex.",
 },{
-    img:null,
+    img:GregUttal,
     name:"Greg Uttal",
     company:"Cyberlink Software",
-    position:"CEO, founder",
-    testimonial:"",
+    position:"President",
+    testimonial:"Rex’s professionalism, attention to detail, and technical proficiency make him an excellent partner for any business looking to enhance their web presence or improve their online services.",
 },{
-    img:null,
+    img:JuliWoods,
     name:"Juli Woods",
     company:"Spirit Media",
-    position:"lead editor",
+    position:"Lead Editor",
     testimonial:"",
 },{
-    img:null,
+    img:StarSpirit,
     name:"Ernest Woods",
     company:"Spirit Media",
-    position:"Founder, CEO",
+    position:"Founder, Lead Editor",
     testimonial:"",
 }]
