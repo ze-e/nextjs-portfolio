@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import Link from "next/link";
+
 import styles from '@/styles/nav.module.scss';
 import { useRouter } from 'next/router';
 import { inconsolata } from "@/utils/fonts";
@@ -6,12 +8,14 @@ import Image from 'next/image';
 
 import logo from "@/assets/brand/robo-ico.png"
 import { HideOnDesktop } from '.';
+import { useActiveRouter } from 'active-link-nextjs';
 
 export default function Nav({ backNav }) {
   const router = useRouter();
   const [anchors, setAnchors] = useState([]);
   const [activeAnchor, setActiveAnchor] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
+  const { registerRoute } = useActiveRouter();
 
   useEffect(() => {
     const anchorElements = document.querySelectorAll('.anchor');
@@ -70,18 +74,29 @@ export default function Nav({ backNav }) {
                 </li>
               )}
               {anchors.map((id, index) => (
-                <li key={id} className={`${styles.navItem} ${id === "Contact" && styles.button}`}>
-                  {(index > 0 && id !== "Contact") && <span className={styles.pipe}>|</span>}
-                  <a
-                    // className={`${styles.link} ${(id === activeAnchor && id !== "Contact") ? styles.isActive : ''}`}
-                    className={`${styles.link}`}
-                    href={`#${id}`}
-                    onClick={handleLinkClick(id)}
-                  >
-                    {id}
-                  </a>
-                </li>
+                id === "Contact" && 
+                  (<li key={id} className={`${styles.navItem} ${id === "Contact" && styles.button}`}>
+                    {(index > 0 && id !== "Contact") && <span className={styles.pipe}>|</span>}
+                      <a
+                        className={`${styles.link}`}
+                        href={`#${id}`}
+                        onClick={handleLinkClick(id)}
+                      >
+                        {id}
+                      </a>
+                  </li>)
               ))}
+
+              <li className={`${styles.navItem} ${styles.button}`}>
+                  <a
+                    className={`${styles.link}`}
+                    href="#Contact"
+                    onClick={handleLinkClick("Contact")}
+                  >
+                    Contact Us
+              </a>
+              </li>
+              <li className={styles.navItem} ><span className={styles.pipe}>|</span><Link className={styles.link} {...registerRoute(['portfolio'])} >Portfolio</Link></li>
             </ul>
             <button className={styles.hamburger} onClick={toggleMenu}>
               ☰
