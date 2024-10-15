@@ -15,7 +15,7 @@ export default function Testimonials({...props}) {
         options={{
           perPage: 2,
           breakpoints: {
-            640: {
+            1000: {
               perPage: 1,
             },
           },

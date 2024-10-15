@@ -14,11 +14,10 @@ export default function TestimonialSlide({data}) {
             {" "}{data?.position}{" "}<br/>
             {" "}{data?.company}{" "}
           </div>
-        </div>
-        <div className={styles.image}>
-          {data?.img && (<Image src={data.img} alt={data.name} />)}
-        </div>
-
+      </div>
+      <div className={styles.image}>
+        {data?.img && (<Image src={data.img} alt={data.name} />)}
+      </div>
       </div>
     </div>
   );
