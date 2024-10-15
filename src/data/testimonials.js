@@ -20,11 +20,11 @@ export const testimonial_data = [{
     name:"Juli Woods",
     company:"Spirit Media",
     position:"Lead Editor",
-    testimonial:"",
+    testimonial:"Rex listened to our needs and developed programs to meet our specific requirements. Rex is responsible for the extra time I now have available to grow Star Spirit Magazine and I am thankful for all he has done for us. ",
 },{
     img:StarSpirit,
     name:"Ernest Woods",
     company:"Spirit Media",
     position:"Founder, Lead Editor",
-    testimonial:"",
+    testimonial:"Rex has created systems that make our work fast and efficient, saving us hours and hours of time over previous production procedures. The time he has saved us will allow us to expand our business without hiring additional help. ",
 }]
