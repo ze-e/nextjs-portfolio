@@ -16,6 +16,15 @@
   }
 }
 
+.twoColumn.projectItem {
+  .column1 {
+    width: calc(100% - 500px);
+  }
+  .column2 {
+    width: 500px; 
+  }
+}
+
 @media only screen and (max-width: 1240px) {
   .twoColumn {
     padding-top: 0;
@@ -27,6 +36,15 @@
 
   .column2 {
     margin-bottom: 12px;
+  }
+
+  .twoColumn.projectItem {
+    .column1 {
+      width: calc(100% - 300px);
+    }
+    .column2 {
+      width: 300px; 
+    }
   }
 }
 
@@ -49,5 +67,14 @@
   .column2 {
     margin-bottom: 12px;
     flex: none;
+  }
+
+  .twoColumn.projectItem {
+    .column1 {
+      width: 100%;
+    }
+    .column2 {
+      width: 100%; 
+    }
   }
 }

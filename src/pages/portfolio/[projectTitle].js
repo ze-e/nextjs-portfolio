@@ -12,6 +12,7 @@ export default function Project() {
   return (
     <Layout backNav={true}>
       <TwoColumn
+        className="projectItem"
         column1={
           <>
             <TextBox>
