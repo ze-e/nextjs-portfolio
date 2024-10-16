@@ -73,10 +73,25 @@ export default function Nav({ backNav }) {
                   X
                 </li>
               )}
+              {/* Portfolio page Home button */}
+              {
+                router.pathname === '/portfolio' ?
+                <li className={styles.navItem} ><Link className={styles.link} {...registerRoute(['/'])} >Home</Link></li> :
+                <li className={styles.navItem}>
+                    <a
+                      className={`${styles.link}`}
+                      href={`#Home`}
+                      onClick={handleLinkClick("Home")}
+                    >
+                      Home
+                    </a>
+                </li>
+              }
+              {/* Anchor Links */}
               {anchors.map((id, index) => (
-                id !== "Contact" && 
+                (id !== "Contact" && id !== "Home") && 
                   (<li key={id} className={`${styles.navItem} ${id === "Contact" && styles.button}`}>
-                    {(index > 0 && id !== "Contact") && <span className={styles.pipe}>|</span>}
+                    {(index > 0 && (id !== "Contact" || id !== "Home")) && <span className={styles.pipe}>|</span>}
                       <a
                         className={`${styles.link}`}
                         href={`#${id}`}
@@ -86,7 +101,9 @@ export default function Nav({ backNav }) {
                       </a>
                   </li>)
               ))}
-
+              {/* Contact Button */}
+              <li className={styles.navItem} ><span className={styles.pipe}>|</span><Link className={styles.link} {...registerRoute(['portfolio'])} >Portfolio</Link></li>
+              {/* Portfolio Link */}
               <li className={`${styles.navItem} ${styles.button}`}>
                   <a
                     className={`${styles.link}`}
@@ -96,7 +113,6 @@ export default function Nav({ backNav }) {
                     Contact Us
               </a>
               </li>
-              <li className={styles.navItem} ><span className={styles.pipe}>|</span><Link className={styles.link} {...registerRoute(['portfolio'])} >Portfolio</Link></li>
             </ul>
             <button className={styles.hamburger} onClick={toggleMenu}>
               ☰
