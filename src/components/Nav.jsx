@@ -74,7 +74,7 @@ export default function Nav({ backNav }) {
                 </li>
               )}
               {anchors.map((id, index) => (
-                id === "Contact" && 
+                id !== "Contact" && 
                   (<li key={id} className={`${styles.navItem} ${id === "Contact" && styles.button}`}>
                     {(index > 0 && id !== "Contact") && <span className={styles.pipe}>|</span>}
                       <a

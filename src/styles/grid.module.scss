@@ -1,6 +1,7 @@
 .container {
   display: flex;
   flex-wrap: wrap;
+  margin: 100px;
 
   &.vertical {
     .itemContainer {
@@ -64,5 +65,11 @@
 
   .text {
     margin: 0px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .container {
+    margin: 4px;
   }
 }

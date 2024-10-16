@@ -15,21 +15,22 @@
 .imageContainer {
   border-radius: 12px;
   width: 100%;
-  height: 300px;
+//   height: 300px;
+  height: 100%;
   background-color: $text-color-1;
 }
 
 .image {
   border-radius: 12px;
   width: 100%;
-  height: 300px;
+  height: 100%;
   object-fit: cover;
   &:hover {
     opacity: 1;
   }
 }
 
-.title {
+.title, .textCardBox {
   width: 100%;
   min-height: 56px;
   padding: 10px;
@@ -43,8 +44,24 @@
   border-radius: 0 0 12px 12px;
 }
 
+.textCardTitle {
+  font-weight: bold;
+}
+
+.textCardContent {
+  font-size: 18px;
+  margin-top: 8px;
+  opacity: .9;
+}
+
 @media only screen and (max-width: 768px) {
   .imageContainer {
     height: 200px;
   }
+}
+
+@media only screen and (max-width: 400px) {
+    .imageContainer {
+        height: 200px;
+    }
 }
