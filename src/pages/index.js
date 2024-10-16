@@ -9,7 +9,7 @@ export default function index() {
   return (
     <Layout>
       <Margin>
-        <section className="anchor" id="Home" style={{ paddingTop: "120px" }}>
+        <section className="anchor" id="Home" style={{ paddingTop: "60px" }}>
           <TwoColumn
             column_1_flex={2}
             column_2_flex={1}
