@@ -53,6 +53,19 @@ export default function Nav({ backNav }) {
     setMenuOpen(false); // Close menu on link click
   };
 
+  const handleScrollToAnchor = (e, href) => {
+    e.preventDefault();
+    router.push(href).then(() => {
+      const anchorId = href.split('#')[1];
+      if (anchorId) {
+        const anchorElement = document.getElementById(anchorId);
+        if (anchorElement) {
+          anchorElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+  };
+
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
@@ -101,10 +114,20 @@ export default function Nav({ backNav }) {
                       </a>
                   </li>)
               ))}
-              {/* Contact Button */}
-              <li className={styles.navItem} ><span className={styles.pipe}>|</span><Link className={styles.link} {...registerRoute(['portfolio'])} >Portfolio</Link></li>
               {/* Portfolio Link */}
-              <li className={`${styles.navItem} ${styles.button}`}>
+              <li className={styles.navItem} ><span className={styles.pipe}>|</span><Link className={styles.link} {...registerRoute(['portfolio'])} >Portfolio</Link></li>
+              {/* Contact Link */}
+              {
+                router.pathname === '/portfolio' ?
+                <li className={`${styles.navItem} ${styles.button}`}>
+                  <a
+                    className={styles.link}
+                    onClick={(e) => handleScrollToAnchor(e, '/#Contact')}
+                  >
+                    Contact Us
+                  </a>
+                </li>:
+                <li className={`${styles.navItem} ${styles.button}`}>
                   <a
                     className={`${styles.link}`}
                     href="#Contact"
@@ -113,6 +136,7 @@ export default function Nav({ backNav }) {
                     Contact Us
               </a>
               </li>
+              }
             </ul>
             <button className={styles.hamburger} onClick={toggleMenu}>
               ☰
