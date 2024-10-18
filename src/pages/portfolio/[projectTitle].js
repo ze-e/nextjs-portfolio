@@ -46,28 +46,32 @@ export default function Project() {
             <br/>
             {testimonialData &&
               testimonialData.map((testimonial, index)=>(
-              <TextBox key={index}>
-                <TwoColumn
-                  column1={
-                    <>
-                      <TestimonialImg testimonial={testimonial} whenToShow={'hideOnMobile'}/>
-                      <TestimonialText testimonial={testimonial} whenToShow={'hideOnDesktop'}/>
-                    </>
-                }
-                  column2={
-                    <>
-                      <TestimonialText testimonial={testimonial} whenToShow={'hideOnMobile'}/>
-                      <TestimonialImg testimonial={testimonial}  whenToShow={'hideOnDesktop'}/>
-                    </>
-                  }
-                />
-              </TextBox>))
-            }
+                <>
+                  <TextBox key={index}>
+                    <TwoColumn
+                      column1={
+                        <>
+                          <TestimonialImg testimonial={testimonial} whenToShow={'hideOnMobile'}/>
+                          <TestimonialText testimonial={testimonial} whenToShow={'hideOnDesktop'}/>
+                        </>
+                    }
+                      column2={
+                        <>
+                          <TestimonialText testimonial={testimonial} whenToShow={'hideOnMobile'}/>
+                          <TestimonialImg testimonial={testimonial}  whenToShow={'hideOnDesktop'}/>
+                        </>
+                      }
+                    />
+                  </TextBox>
+                  {index < testimonialData.length - 1 && <><br /><br /></>}
+               </>
+              )
+            )}
           </>
         }
         column2={
           <>
-            <Img src={project?.img ? project?.img : projectDefaultImg} alt={project?.title} width={'200px'}/>
+            <Img src={project?.img ? project?.img : projectDefaultImg} alt={project?.title} width={'350px'}/>
             <Tags data={project?.tags} />
           </>
         }

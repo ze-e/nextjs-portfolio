@@ -25,7 +25,7 @@ const projects = [
       "I have provided web development services to Cyberlink for over five years, providing them with everything from DNS and hosting to adding new pages",
     tags: ["Wordpress", "Elementor", "Web Development", "Online Presence"],
     link: "https://oncyberlink.com",
-    company:"Cyberlink LLC",
+    company:"Cyberlink Software",
     img: cyberlinkImg,
   },
   {
@@ -36,7 +36,7 @@ const projects = [
       "I created this website for Spirit Media, a local newspaper in Star, Idaho. I also provide an online version of their magazine. Additionally, I have helped streamline their workflow using AI assistants, to help them meet their tight monthly deadlines well ahead of schedule.",
     tags: ["Wordpress", "Web Development", "Online Presence"],
     link: "https://spiritmedias.net",
-    company:"Spirit Media LLC",
+    company:"Spirit Media",
     img: SpiritMedia,
   },
   {
