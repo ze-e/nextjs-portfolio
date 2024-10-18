@@ -31,3 +31,7 @@ export { default as HideOnDesktop } from '@/components/HideOnDesktop';
 export { default as Testimonials } from '@/components/Testimonials';
 
 export { default as TestimonialSlide } from '@/components/TestimonialSlide';
+
+export { default as TestimonialImg } from '@/components/TestimonialImg';
+
+export { default as TestimonialText } from '@/components/TestimonialText';

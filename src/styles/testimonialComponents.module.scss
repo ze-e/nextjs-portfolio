@@ -1,0 +1,22 @@
+@import './_mixins';
+
+.hideOnMobile {
+    position: relative;
+  }
+  
+  @media only screen and (max-width: 1000px) {
+      .hideOnMobile {
+        display: none;
+      }
+    }
+
+.hideOnDesktop {
+    position: relative;
+    display: none;
+  }
+  
+  @include small-screen {
+      .hideOnDesktop {
+        display: block;
+      }
+    }
