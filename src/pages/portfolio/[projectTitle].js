@@ -33,7 +33,7 @@ export default function Project() {
             <Tags>
               {!!project?.link && (
                 <a href={project?.link} target="_blank">
-                  <Tag tag={"Live Site"} />
+                  <Tag tag={"Visit Site"} />
                 </a>
               )}
               {/* {!!project?.repo && (
@@ -71,7 +71,9 @@ export default function Project() {
         }
         column2={
           <>
-            <Img src={project?.img ? project?.img : projectDefaultImg} alt={project?.title} width={'350px'}/>
+            <a href={project?.link} target="_blank">
+              <Img src={project?.img ? project?.img : projectDefaultImg} alt={project?.title} width={'350px'}/>
+            </a>
             <Tags data={project?.tags} />
           </>
         }
