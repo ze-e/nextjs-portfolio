@@ -58,7 +58,7 @@ export default function Project() {
                       column2={
                         <>
                           <TestimonialText testimonial={testimonial} whenToShow={'hideOnMobile'}/>
-                          <TestimonialImg testimonial={testimonial}  whenToShow={'hideOnDesktop'}/>
+                          <TestimonialImg testimonial={testimonial} whenToShow={'hideOnDesktop'}/>
                         </>
                       }
                     />
@@ -72,7 +72,7 @@ export default function Project() {
         column2={
           <>
             <a href={project?.link} target="_blank">
-              <Img src={project?.img ? project?.img : projectDefaultImg} alt={project?.title} width={'350px'}/>
+              <Img src={project?.img ? project?.img : projectDefaultImg} alt={project?.title} sizes={"(max-width: 1000px) 80%, 350px"}/>
             </a>
             <Tags data={project?.tags} />
           </>

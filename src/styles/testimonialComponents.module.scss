@@ -1,14 +1,18 @@
 @import './_mixins';
 
+
 .hideOnMobile {
     position: relative;
   }
   
   @media only screen and (max-width: 1000px) {
-      .hideOnMobile {
-        display: none;
-      }
+    .hideOnMobile {
+      display: none;
     }
+    .testimonialImage {
+      width: 80%;
+    }
+  }
 
 .hideOnDesktop {
     position: relative;
